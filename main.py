@@ -1,4 +1,3 @@
-
 #python3 main.py           
 
 import function
@@ -20,13 +19,13 @@ def main():
             print("Exit - Exit program")
 
         elif command == "add":
-           function.add()
+           function.add(database)
 
         elif command == "show":
-            function.show()
+            function.show(database)
         
         elif command == "delete":
-            function.delete()
+            function.delete(database)
 
         elif command == "exit":
             function.exit()
