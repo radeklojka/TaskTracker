@@ -1,3 +1,5 @@
+#\tasktracker/>python main.py
+
 def main():
 
     print("Welcome to TaskTracker! type help to see menu")
@@ -7,14 +9,17 @@ def main():
         command = input("Enter command: ").strip().lower()
 
         if command == "help":
-            print("Command: \n")
+            print("Commands: \n")
             print("Help - Show this help menu")
             print("Greet - Say hello to the user")
             print("exit - Exit program")
 
-        elif command == "Greet":
-            name = input("Enter your name: ").strip()
+        elif command == "greet":
+            database = []
+            name = str(input("Enter your name: ")).strip()
+            database.append(name)
             print(f"Hello {name}!")
+            print(database)
 
         elif command == "exit":
             print("Goodbye!")
@@ -22,4 +27,7 @@ def main():
 
         else:
             print("Invalid command! Type help to see menu")
+
+if __name__ == "__main__":
+    main()
             
