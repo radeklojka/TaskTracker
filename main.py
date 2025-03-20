@@ -1,29 +1,35 @@
-#\tasktracker/>python main.py
+
+#python3 main.py           
+
+import function
 
 def main():
-
+    database = []
     print("Welcome to TaskTracker! type help to see menu")
 
     while True:
 
-        command = input("Enter command: ").strip().lower()
+        command = input("Enter command (For options type 'help'): ").strip().lower()
 
         if command == "help":
             print("Commands: \n")
             print("Help - Show this help menu")
-            print("Greet - Say hello to the user")
-            print("exit - Exit program")
+            print("Add - Add a task")
+            print("Show - Shows list")
+            print("Delete - Delete a task")
+            print("Exit - Exit program")
 
-        elif command == "greet":
-            database = []
-            name = str(input("Enter your name: ")).strip()
-            database.append(name)
-            print(f"Hello {name}!")
-            print(database)
+        elif command == "add":
+           function.add()
+
+        elif command == "show":
+            function.show()
+        
+        elif command == "delete":
+            function.delete()
 
         elif command == "exit":
-            print("Goodbye!")
-            break
+            function.exit()
 
         else:
             print("Invalid command! Type help to see menu")
